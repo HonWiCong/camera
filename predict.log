@@ -413,3 +413,4 @@
 [2024-05-29 10:28:31,309][easyocr.easyocr][WARNING] - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
 [2024-05-29 10:28:33,388][easyocr.easyocr][WARNING] - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
 [2024-05-29 10:28:35,363][easyocr.easyocr][WARNING] - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+[2024-05-30 02:24:05,359][easyocr.easyocr][WARNING] - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.

@@ -212,13 +212,13 @@ class DetectionPredictor(BasePredictor):
                                 print("Something went wrong")
                             else:
                                 sql = {
-                                    sql: f"UPDATE car_entry_exit_log SET leave_at = NOW(), duration = TIMESTAMPDIFF(MINUTE, enter_at, NOW()) WHERE carplate = '{plate_number}' ORDER BY enter_at DESC LIMIT 1"
+                                    sql: f"UPDATE car_entry_exit_log SET exit_at = NOW(), duration = TIMESTAMPDIFF(MINUTE, enter_at, NOW()) WHERE carplate = '{plate_number}' ORDER BY enter_at DESC LIMIT 1"
                                 }
                                 mqtt_connection.publish(topic="rpi/carplate_post_request", payload=json.dumps(sql), qos=2)
                                 cursor = localDatabase.cursor(dictionary=True)
                                 cursor.execute(f"""
                                     UPDATE car_entry_exit_log 
-                                    SET leave_at = NOW(), 
+                                    SET exit_at = NOW(), 
                                         duration = TIMESTAMPDIFF(MINUTE, enter_at, NOW())
                                     WHERE carplate = '{plate_number}' 
                                     ORDER BY enter_at DESC 
